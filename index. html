@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>احباب المصطفي للصاغة - Abo Mazen Gold</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+  :root{ --gold:#D4AF37; --black:#0a0a0a; }
+  body{font-family:'Cairo',sans-serif;margin:0;background:var(--black);color:#fff}
+  header{background:linear-gradient(90deg,var(--gold),#f1e08b);color:var(--black);padding:15px;text-align:center}
+  header h1{margin:0;font-size:22px;font-weight:700}
+  header p{margin:4px 0 0;font-size:14px}
+  .price-bar{display:flex;justify-content:space-around;background:#111;padding:12px;font-weight:bold;font-size:14px;flex-wrap:wrap;gap:8px}
+  .price-bar span{color:var(--gold)}
+  .products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:15px}
+  .card{background:#1a1a1a;border:1px solid var(--gold);border-radius:12px;padding:10px;text-align:center;transition:0.3s}
+  .card:hover{transform:translateY(-3px);border-color:#f1e08b}
+  .card img{width:100%;border-radius:8px;height:180px;object-fit:cover}
+  .card h3{color:var(--gold);margin:8px 0 4px;font-size:16px}
+  .card p{margin:4px 0 10px;font-size:13px;color:#ccc}
+  .btn{background:var(--gold);color:var(--black);padding:10px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;width:100%;font-size:15px}
+  .btn:active{transform:scale(0.97)}
+  footer{text-align:center;padding:15px;font-size:12px;color:#aaa;background:#111;margin-top:10px}
+  footer a{color:var(--gold);text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>احباب المصطفي للصاغة</h1>
+  <p>Abo Mazen Gold - اسوان</p>
+</header>
+
+<div class="price-bar">
+  <div>عيار 24: <span>4200 ج</span></div>
+  <div>عيار 21: <span>3675 ج</span></div>
+  <div>عيار 18: <span>3150 ج</span></div>
+</div>
+
+<div class="products">
+  <div class="card">
+    <img src="https://i.postimg.cc/mZcmdBX9/FB-IMG-1786627533889.jpg" alt="حلقات ذهب">
+    <h3>حلقات ذهب</h3>
+    <p>تفاصيل لامعة .. تليق بذوقك</p>
+    <button class="btn" onclick="book('حلقات ذهب')">احجز دلوقتي</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/pV9s0RGF/FB-IMG-1786627542267.jpg" alt="طقم غوايش">
+    <h3>طقم غوايش + انسيال</h3>
+    <p>شغل فخم علبة مخمل</p>
+    <button class="btn" onclick="book('طقم غوايش')">احجز دلوقتي</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/J4Y4R335/FB-IMG-1786627542267.jpg" alt="خاتم">
+    <h3>خاتم عيار 21</h3>
+    <p>الوزن: 7.44 جرام</p>
+    <button class="btn" onclick="book('خاتم 7.44 جرام')">احجز دلوقتي</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/m2p2T33S/FB-IMG-1786627509851.jpg" alt="غوايش">
+    <h3>غوايش عيار 21</h3>
+    <p>شغل جولي جولد</p>
+    <button class="btn" onclick="book('غوايش جولي جولد')">احجز دلوقتي</button>
+  </div>
+</div>
+
+<footer>
+  للتواصل واتساب: <a href="https://wa.me/201120700600">20 11 20700600+</a> | اسوان، كوم امبو. شارع الصاغه
+</footer>
+
+<script>
+function book(product){
+  let phone = "201120700600";
+  let msg = encodeURIComponent("السلام عليكم، عايز احجز: " + product + " من Abo Mazen Gold");
+  window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+}
+</script>
+
+</body>
+</html>
